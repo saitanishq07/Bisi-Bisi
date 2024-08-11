@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<iframe id="pdf-viewer" src="BISI%20BISI.pdf"></iframe>
+
+<script>
+    const viewer = document.getElementById('pdf-viewer');
+    viewer.onload = function() {
+        viewer.contentWindow.scrollTo(0, viewer.contentWindow.document.body.scrollHeight);
+    };
+</script>
+
+</body>
+</html>
